@@ -1,4 +1,5 @@
-from flask import Flask, jsonify
+# from flask import Flask, jsonify
+import json
 from svm import Process
 from nbc import analisnbc
 

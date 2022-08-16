@@ -1,5 +1,6 @@
 from preprocessing import Cleantweet
-from flask import jsonify
+# from flask import jsonify
+import json
 import pandas as pd
 import json
 import logging
@@ -43,7 +44,7 @@ def analisnbc():
      # print(confusion_matrix)
     result = classification_report(y_test, predicted)
 
-    return  jsonify ({
+    return  json.dumps ({
         "data":{
             "sentimen": json.loads(data["Sentimen"].to_json(orient="records")),
             "cleantweet": json.loads(data["Cleantweet"].to_json(orient="records")),
